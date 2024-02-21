@@ -8,7 +8,7 @@ form.addEventListener('submit', function(e) {
     e.preventDefault()
     
     adicionaLinha()
-    //atualizaTabela()
+    atualizaTabela()
 })
 
 
@@ -21,7 +21,7 @@ function adicionaLinha() {
 
     } else {
         nomes.push(inputContato.value)
-        //telefones.push(inputTelefone.value)
+        telefones.push(inputTelefone.value)
 
         let linha = '<tr>'
         linha += `<td>${inputContato.value}</td>`
@@ -30,7 +30,7 @@ function adicionaLinha() {
 
         const corpoTabela = document.getElementById('tbody')
         corpoTabela.innerHTML = linha
-      //  linhas += linha
+        linhas += linha
     }
 }
 
