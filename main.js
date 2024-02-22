@@ -13,7 +13,7 @@ form.addEventListener('submit', function(e) {
 
 
 function adicionaLinha() {
-    const inputContato = documentt.getElementById('contact-name')
+    const inputContato = document.getElementById('contact-name')
     const inputTelefone = document.getElementById('contact-number')
 
     if (nomes.includes(inputContato.value)) {
@@ -28,14 +28,12 @@ function adicionaLinha() {
         linha += `<td>${inputTelefone.value}</td>`
         linha += '</tr>'
 
-        const corpoTabela = document.getElementById('tbody')
-        corpoTabela.innerHTML = linha
         linhas += linha
     }
+    inputContato.value = ''
+    inputTelefone.value = ''
 }
 
-inputContato.value = ''
-inputTelefone.value = ''
 
 function atualizaTabela() {
     const corpoTabela = document.querySelector('tbody')
